@@ -13,4 +13,11 @@ You have to keep in mind that:
 Each character will be treated separately.
 The last character is the point.
 Use three variables as counters.
+---------------------------------------------------------------------------------------------------------------
+This code reads a sentence entered by the user (ending with a point), then goes through each character one by one to calculate three things at the same time:
 
+The length — by counting each character read.
+The number of words — by counting spaces (each space = one word finished), starting at 1 since the last word has no space after it.
+The number of vowels — by checking if each character is one of a, e, i, o, u, y (uppercase or lowercase).
+
+At the end, it prints out the three results.
