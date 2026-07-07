@@ -1,0 +1,39 @@
+ALGORITHM SentenceAnalysis
+
+VAR
+    sentence : STRING
+    character : CHARACTER
+    length : INTEGER
+    wordCount : INTEGER
+    vowelCount : INTEGER
+    i : INTEGER
+
+BEGIN
+    Write("Enter a sentence ending with a point : ")
+    Read(sentence)
+
+    length ← 0
+    wordCount ← 1
+    vowelCount ← 0
+
+    FOR i ← 1 TO Length(sentence) DO
+        character ← sentence[i]
+        length ← length + 1
+
+        IF (character = ' ') THEN
+            wordCount ← wordCount + 1
+        END_IF
+
+        IF (character = 'a' OR character = 'e' OR character = 'i' OR 
+            character = 'o' OR character = 'u' OR character = 'y' OR
+            character = 'A' OR character = 'E' OR character = 'I' OR 
+            character = 'O' OR character = 'U' OR character = 'Y') THEN
+            vowelCount ← vowelCount + 1
+        END_IF
+    END_FOR
+
+    Write("Length of the sentence : ", length)
+    Write("Number of words : ", wordCount)
+    Write("Number of vowels : ", vowelCount)
+
+END
